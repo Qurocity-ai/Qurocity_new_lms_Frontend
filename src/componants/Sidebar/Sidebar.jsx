@@ -32,7 +32,8 @@ const Sidebar = () => {
           }`}
           onClick={() => handleItemClick('language')}
 >
-          Language
+<img className={styles.icon} src='./assets/language.png'></img>Language
+        
 </div>
 </Link>
 <Link to="/ielts">
@@ -43,7 +44,7 @@ const Sidebar = () => {
           onClick={() => handleItemClick('ielts')}
 >
           
-IELTS
+<img className={styles.icon} src='./assets/eng.png'></img>IELTS
 </div>
 </Link>
 <Link to="/toefl">
@@ -53,7 +54,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('toefl')}
 >
-         TOEFL
+<img className={styles.icon} src='./assets/exam.png'></img>TOEFL
 </div>
 </Link>
 <Link to="/onetoone">
@@ -64,7 +65,7 @@ IELTS
           onClick={() => handleItemClick('session')}
 >
           
-          1 on 1 Session
+<img className={styles.icon} src='./assets/webinar.png'></img> 1 on 1 Session
 </div>
 </Link>
 <hr/>
@@ -77,7 +78,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('blog')}
 >
-         Blog
+<img className={styles.icon} src='./assets/blogger.png'></img>Blog
 </div>
 </Link>
 <Link to="/quiz">
@@ -87,7 +88,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('quiz')}
 >
-         Quiz
+<img className={styles.icon} src='./assets/choose.png'></img>Quiz
 </div>
 </Link>
 <Link to="/audio">
@@ -97,7 +98,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('audio')}
 >
-         Audio
+<img className={styles.icon} src='./assets/volume.png'></img>Audio
 </div>
 </Link>
 <Link to="/speaking">
@@ -107,7 +108,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('speaking')}
 >
-         Speaking
+<img className={styles.icon} src='./assets/speaking.png'></img>Speaking
 </div>
 </Link>
 <Link to="/writing">
@@ -117,7 +118,7 @@ IELTS
           }`}
           onClick={() => handleItemClick('writing')}
 >
-         Writing
+<img className={styles.icon} src='./assets/writing.png'></img>Writing
 </div>
 </Link>
 </div>
@@ -128,7 +129,8 @@ IELTS
           }`}
           onClick={() => handleItemClick('support')}
 >
-          Support Ticket
+
+<img className={styles.icon} src='./assets/customer-service 1.png'></img> Support Ticket
 </div>
 </Link>
 </div>
