@@ -15,6 +15,8 @@ const Dashboard = () => {
 <div className={styles.content}>
 
 <AllRoute/>
+
+
 </div>
 </div>
 </div>
