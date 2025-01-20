@@ -10,6 +10,7 @@ import Speaking from '../pages/Speaking/Speaking'
 import SupportTickets from '../pages/SupportTickets/SupportTickets'
 import TOEFL from '../pages/TOEFL/TOEFL'
 import Writing from '../pages/Writing/Writing'
+import Lessons from '../pages/Language/Lessons'
 
 function AllRoute() {
   return (
@@ -25,6 +26,7 @@ function AllRoute() {
         <Route path='/supportticket' element={<SupportTickets/>}/> 
         <Route path='/toefl' element={<TOEFL/>}/> 
         <Route path='/writing' element={<Writing/>}/> 
+        <Route path="/lessons" element={<Lessons/>} />
       </Routes>
     </div>
   )
