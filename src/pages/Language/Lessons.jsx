@@ -11,12 +11,13 @@ const Lessons = () => {
   const [selectedLessonId, setSelectedLessonId] = useState(null);
   const [currentVideo, setCurrentVideo] = useState(null);
   const [loading, setLoading] = useState(true); // Initially loading is true
-
+  const [level, setLevel] = useState("A1"); 
+  const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
   // Fetch lessons when the language is provided
   useEffect(() => {
     if (language) {
       setLoading(true); // Start loading
-      fetch(`https://qurocity-lms-backend.onrender.com/api/lessons/${language}`)
+      fetch(`https://qurocity-lms-backend.onrender.com/api/lessons/${language}?level=${level}`)
         .then((response) => response.json())
         .then((data) => {
           setLessons(data);
@@ -35,7 +36,7 @@ const Lessons = () => {
           setLoading(false); // Stop loading even if there's an error
         });
     }
-  }, [language]);
+  }, [language, level]);
 
   const toggleLesson = (lessonId) => {
     // Toggle the visibility of the selected lesson
@@ -45,6 +46,28 @@ const Lessons = () => {
   const handleVideoClick = (video) => {
     setCurrentVideo(video); // Change the current video
   };
+
+
+  // change level 
+  const handleLevelChange = (event) => {
+    setLevel(event.target.value);
+  };
+
+
+  // Helper function to get image url 
+  const getLanguage = (language)=>{
+   const ImageURL = {
+     english: "/assets/England.jpg",
+     spanish: "/assets/Spain.jpg",
+     mandarin: "/assets/China.jpg",
+     french: "/assets/French.jpg",
+     japanese: "/assets/Japan.jpg",
+     korean:"/assets/Korea.jpg",
+     german:"/assets/German.jpg"
+     
+   }
+   return ImageURL[language];
+  }
 
   return (
     <div className={styles.pageWrapper}>
@@ -63,6 +86,26 @@ const Lessons = () => {
         </Box>
       ) : (
         <>
+        {/* Filter lession by level */}
+            <div className={styles.filterSection}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={getLanguage(language)} alt="flag" />
+                <span htmlFor="levelDropdown">{language.charAt(0).toUpperCase() + language.slice(1).toLowerCase()}</span>
+              </div>
+              <select
+                id="levelDropdown"
+                className={styles.levelDropdown}
+                value={level}
+                onChange={handleLevelChange}
+              >
+                {levels.map((levelOption) => (
+                  <option key={levelOption} value={levelOption}>
+                    {levelOption}
+                  </option>
+                ))}
+              </select>
+              
+            </div>
           {/* Sidebar Section */}
           <div className={styles.left}>
             {currentVideo ? (

@@ -9,6 +9,45 @@
     
 }
 
+.filterSection {
+    position: absolute;
+    top: 10px;
+    /* Adjust to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 8px 20px;
+    border-radius: 20px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    z-index: 1000;
+    /* Ensures it appears above other elements */
+}
+
+.filterSection img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.filterSection span {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 15px;
+    color: #00046C;
+}
+
+.levelDropdown {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 .left {
     flex: 3;
     /* background-color: rgb(255, 255, 255); */
