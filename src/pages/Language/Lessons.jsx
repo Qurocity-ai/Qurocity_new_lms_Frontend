@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./Lessons.module.css";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import { FiYoutube } from "react-icons/fi";
 
 const Lessons = () => {
   const location = useLocation();
@@ -98,7 +99,7 @@ const Lessons = () => {
                         Lesson {lesson.lessonNumber}: {lesson.lessonTitle}
                       </h3>
                       <span className={styles.toggleIcon}>
-                        {selectedLessonId === lesson._id ? "-" : "+"}
+                        {selectedLessonId === lesson._id ? "" : ""}
                       </span>
                     </div>
                     <hr className={styles.lessondivider} />
@@ -108,15 +109,18 @@ const Lessons = () => {
                       <ul className={styles.videoList}>
                         {lesson.videos.map((video) => (
                           <li
+                          
                             key={video._id}
                             className={`${styles.videoItem} ${
+                              
                               video._id === currentVideo?._id
                                 ? styles.activeVideo
                                 : ""
                             }`}
                             onClick={() => handleVideoClick(video)}
                           >
-                            {video.title}
+                           <FiYoutube  style={{  fontSize: "20px", paddingRight:"10px" }}/> 
+                           {video.title}
                           </li>
                         ))}
                       </ul>
