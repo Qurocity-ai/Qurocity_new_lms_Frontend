@@ -4,16 +4,21 @@
     gap: 30px;
     padding: 20px;
     box-sizing: border-box;
+    /* margin-top: 25px; */
     height: 80vh;
+    
   }
   
   .left {
     flex: 3;
     padding: 20px;
+    /* background-color: #fff; */
     border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* height: 70vh; */
+    /* margin-top: 25px; */
   }
-  
-  .videoDetails {
+  .videoDetails{
     margin-top: 20px;
     margin-left: 10px;
     font-size: 22px;
@@ -25,7 +30,9 @@
     height: 0;
     overflow: hidden;
     border-radius: 8px;
+    /* background-color: #e0e0e0; */
     margin-top: 25px;
+    /* border: 2px solid red; */
   }
   
   .videoPlayer {
@@ -35,21 +42,22 @@
     width: 100%;
     height: 100%;
     border: none;
+    
   }
   
   .right {
     flex: 2;
+    /* padding: 20px; */
     overflow-y: auto;
     height: 78vh;
     margin-top: 40px;
   }
   
-  .lessonList {
-    margin-bottom: 10px;
-  }
   
-  .lessonItem {
+  
+  .lesson {
     margin-bottom: 10px;
+    
   }
   
   .lessonHeader {
@@ -61,12 +69,7 @@
     padding: 20px 15px;
     border-radius: 8px;
     transition: background-color 0.3s;
-    
-  }
-  .lessonHeader h3{
-    font-size: 1.2rem;
-    font-weight: normal;
-
+   
   }
   
   .lessonHeader:hover {
@@ -97,12 +100,13 @@
     margin-bottom: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    /* font-size: 16px; */
   }
-  
-  .reacticonyou {
+  .reacticonyou{
     font-size: 20px;
     margin-right: 10px;
     margin-bottom: -5px;
+  
   }
   
   .videoItem:hover {
@@ -127,8 +131,10 @@
       height: 250px;
     }
   }
-  
-  .reacticon {
+  .reacticon{
+    
     font-size: 25px;
+  
   }
+  
   

@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import styles from "./Lessons.module.css";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { FiYoutube } from "react-icons/fi";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import { PiVideo } from "react-icons/pi";
 
 const Lessons = () => {
   const location = useLocation();
@@ -60,7 +61,7 @@ const Lessons = () => {
             marginLeft: "50%",
           }}
         >
-          <CircularProgress />
+          <CircularProgress /> 
         </Box>
       ) : (
         <>
@@ -99,10 +100,10 @@ const Lessons = () => {
                         Lesson {lesson.lessonNumber}: {lesson.lessonTitle}
                       </h3>
                       <span className={styles.toggleIcon}>
-                        {selectedLessonId === lesson._id ? "" : ""}
+                        {selectedLessonId === lesson._id ? <RiArrowDropUpLine className={styles.reacticon} /> : <RiArrowDropDownLine className={styles.reacticon} />}
                       </span>
                     </div>
-                    <hr className={styles.lessondivider} />
+                    {/* <hr className={styles.lessondivider} /> */}
 
                     {/* Dropdown Content */}
                     {selectedLessonId === lesson._id && (
@@ -111,16 +112,14 @@ const Lessons = () => {
                           <li
                           
                             key={video._id}
-                            className={`${styles.videoItem} ${
-                              
-                              video._id === currentVideo?._id
-                                ? styles.activeVideo
-                                : ""
-                            }`}
+                            className={styles.videoItem}
                             onClick={() => handleVideoClick(video)}
                           >
-                           <FiYoutube  style={{  fontSize: "20px", paddingRight:"10px" }}/> 
-                           {video.title}
+                            
+                            <p>
+                               <PiVideo  className={styles.reacticonyou} />
+                                {video.title}
+                             </p>
                           </li>
                         ))}
                       </ul>
