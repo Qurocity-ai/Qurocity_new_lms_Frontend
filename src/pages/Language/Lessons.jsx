@@ -123,7 +123,7 @@ const Lessons = () => {
               <p></p>
             )}
             <div className={styles.videoDetails}>
-              <h2>{currentVideo?.title || ""}</h2>
+              <h3>{currentVideo?.title || ""}</h3>
               <p>{currentVideo?.description || ""}</p>
             </div>
           </div>
