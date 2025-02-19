@@ -1,9 +1,12 @@
 import React from 'react'
+import UnderDevelopmentCard from '../../componants/UnderDev/UnderDev';
 
 function Audio() {
+  
   return (
+    
     <div>
-      <h1>Audio</h1>
+      <UnderDevelopmentCard/>
     </div>
   )
 }

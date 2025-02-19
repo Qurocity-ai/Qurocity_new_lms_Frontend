@@ -1,9 +1,10 @@
 import React from 'react'
+import UnderDevelopmentCard from '../../componants/UnderDev/UnderDev'
 
 function SupportTickets() {
   return (
     <div>
-      <h1>supportticket</h1>
+      <UnderDevelopmentCard/>
     </div>
   )
 }

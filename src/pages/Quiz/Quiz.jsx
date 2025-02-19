@@ -1,9 +1,10 @@
 import React from 'react'
+import UnderDevelopmentCard from '../../componants/UnderDev/UnderDev'
 
 function Quiz() {
   return (
     <div>
-      <h1>Quiz</h1>
+       <UnderDevelopmentCard />
     </div>
   )
 }

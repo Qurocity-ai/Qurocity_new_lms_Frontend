@@ -1,9 +1,10 @@
 import React from 'react'
+import UnderDevelopmentCard from '../../componants/UnderDev/UnderDev'
 
 function Speaking() {
   return (
     <div>
-    <h1>speaking</h1>
+    <UnderDevelopmentCard/>
     </div>
   )
 }

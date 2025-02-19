@@ -1,9 +1,11 @@
 import React from 'react'
+import UnderDevelopmentCard from '../../componants/UnderDev/UnderDev'
 
 function Blog() {
   return (
     <div>
-      <h1> Blog</h1>
+      {/* <h1> Blog</h1> */}
+      <UnderDevelopmentCard/>
     </div>
   )
 }
