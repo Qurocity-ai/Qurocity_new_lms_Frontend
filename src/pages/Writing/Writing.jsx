@@ -5,6 +5,7 @@ function Writing() {
   return (
     <div>
      <UnderDevelopmentCard/>
+     {/* writing */}
     </div>
   )
 }
