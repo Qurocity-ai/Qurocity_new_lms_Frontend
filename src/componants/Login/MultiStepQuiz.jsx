@@ -156,13 +156,19 @@ function MultiStepQuiz() {
       .then((data) => {
         
         
+        console.log("Success:", data);
         if (data.token) {
           localStorage.setItem("token", data.token);
+          console.log("Token stored:", localStorage.getItem("token")); 
           navigate('/dashboard');
-        } else {
-          console.log("Token not recevied", data)
+
+          
         }
       })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
   };
 
   return (

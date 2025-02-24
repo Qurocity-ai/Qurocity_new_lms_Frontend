@@ -16,6 +16,7 @@ import Dashboard from '../componants/Dashboard/Dashboard';
 
 
 
+
 function AllRoute() {
   return (
     <Routes>
@@ -31,7 +32,7 @@ function AllRoute() {
       <Route path='/writing' element={<Writing />} /> 
       <Route path='/lessons' element={<Lessons />} />
       <Route path='/join-class' element={<JoinClassCard />} />
-      {/* <Route path='/dashboard' element={<Dashboard/>} /> */}
+      <Route path='/dashboard' element={<Dashboard />} />
     </Routes>
   );
 }

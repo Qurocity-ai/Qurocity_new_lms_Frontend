@@ -8,7 +8,7 @@ import UnderDevelopmentCard from './componants/UnderDev/UnderDev'
 function App() {
   return (
     <div>
-     <Dashboard />
+     <MultiStepQuiz />
       
     </div>
   )
