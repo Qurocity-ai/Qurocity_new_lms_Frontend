@@ -289,8 +289,10 @@ function MultiStepQuiz() {
           </div>
         </form>
       </div>
+      
 
     </>
+    
   );
 }
 
