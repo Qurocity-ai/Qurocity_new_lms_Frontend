@@ -10,8 +10,9 @@ function App() {
   return (
     <div>
       {/* <MultiStepQuiz/> */}
-     <UserLogin />
-      
+     {/* <UserLogin /> */}
+     {/* <Dashboard /> */}
+      <AllRoute/>
     </div>
   )
 }
