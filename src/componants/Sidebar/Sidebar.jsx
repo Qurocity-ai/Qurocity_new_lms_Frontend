@@ -21,7 +21,7 @@ const Sidebar = () => {
       <div className={styles.logoSection}>
         {!isCollapsed && (
           <h1 className={styles.logo}>
-            <img src='./assets/logo.png' alt="Logo" />
+            <img src='/assets/logo.png' alt="Logo" />
           </h1>
         )}
         <button className={styles.toggleButton} onClick={toggleSidebar}>
@@ -31,7 +31,7 @@ const Sidebar = () => {
 
       {/* Menu Items */}
       <div className={styles.menu}>
-        <Link to="/">
+        <Link to="/dashboard/language">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'language' ? styles.active : ''
@@ -40,13 +40,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/language.png'
+              src='/assets/language.png'
               alt="Language"
             />
             {!isCollapsed && <span>Language</span>}
           </div>
         </Link>
-        <Link to="/ielts">
+        <Link to="/dashboard/ielts">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'ielts' ? styles.active : ''
@@ -55,13 +55,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/eng.png'
+              src='/assets/eng.png'
               alt="IELTS"
             />
             {!isCollapsed && <span>IELTS</span>}
           </div>
         </Link>
-        <Link to="/toefl">
+        <Link to="/dashboard/toefl">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'toefl' ? styles.active : ''
@@ -70,13 +70,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/exam.png'
+              src='/assets/exam.png'
               alt="TOEFL"
             />
             {!isCollapsed && <span>TOEFL</span>}
           </div>
         </Link>
-        <Link to="/onetoone">
+        <Link to="/dashboard/onetoone">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'session' ? styles.active : ''
@@ -85,7 +85,7 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/webinar.png'
+              src='/assets/webinar.png'
               alt="1 on 1 Session"
             />
             {!isCollapsed && <span>1 on 1 Session</span>}
@@ -96,7 +96,7 @@ const Sidebar = () => {
         <div className={styles.lets}>
         {!isCollapsed && <div className={styles.divider}>Let’s Practice</div>}
 
-        <Link to="/blog">
+          <Link to="/dashboard/blog">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'blog' ? styles.active : ''
@@ -105,13 +105,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/blogger.png'
+              src='/assets/blogger.png'
               alt="Blog"
             />
             {!isCollapsed && <span>Blog</span>}
           </div>
         </Link>
-        <Link to="/quiz">
+          <Link to="/dashboard/quiz">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'quiz' ? styles.active : ''
@@ -120,13 +120,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/choose.png'
+              src='/assets/choose.png'
               alt="Quiz"
             />
             {!isCollapsed && <span>Quiz</span>}
           </div>
         </Link>
-        <Link to="/audio">
+          <Link to="/dashboard/audio">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'audio' ? styles.active : ''
@@ -135,13 +135,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/volume.png'
+              src='/assets/volume.png'
               alt="Audio"
             />
             {!isCollapsed && <span>Audio</span>}
           </div>
         </Link>
-        <Link to="/speaking">
+          <Link to="/dashboard/speaking">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'speaking' ? styles.active : ''
@@ -150,13 +150,13 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/speaking.png'
+              src='/assets/speaking.png'
               alt="Speaking"
             />
             {!isCollapsed && <span>Speaking</span>}
           </div>
         </Link>
-        <Link to="/writing">
+          <Link to="/dashboard/writing">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'writing' ? styles.active : ''
@@ -165,7 +165,7 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/writing.png'
+              src='/assets/writing.png'
               alt="Writing"
             />
             {!isCollapsed && <span>Writing</span>}
@@ -173,7 +173,7 @@ const Sidebar = () => {
         </Link>
         </div>
 
-        <Link to="/supportticket">
+        <Link to="/dashboard/supportticket">
           <div
             className={`${styles.menuItem} ${
               activeItem === 'support' ? styles.active : ''
@@ -182,7 +182,7 @@ const Sidebar = () => {
           >
             <img
               className={styles.icon}
-              src='./assets/customer-service 1.png'
+              src='/assets/customer-service 1.png'
               alt="Support Ticket"
             />
             {!isCollapsed && <span>Support Ticket</span>}

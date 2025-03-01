@@ -127,6 +127,51 @@ function MultiStepQuiz() {
     }
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   const payload = {
+  //     responses: {
+  //       question1: formData.goal,
+  //       question2: formData.familiarity,
+  //       question3: formData.learningPreference,
+  //       question4: formData.dailyTime,
+  //       question5: formData.learningMethods
+  //     },
+  //     name: formData.name,
+  //     email: formData.email,
+  //     password: formData.password,
+  //   };
+
+  //   console.log("Payload:", payload);
+
+  //   fetch("https://qurocity-lms-backend.onrender.com/api/quiz/auth", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(payload),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+        
+        
+  //       console.log("Success:", data);
+  //       if (data.token) {
+  //         localStorage.setItem("token", data.token);
+  //         console.log("Token stored:", localStorage.getItem("token")); 
+  //         navigate('/dashboard');
+
+          
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //     });
+
+  // };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -143,8 +188,6 @@ function MultiStepQuiz() {
       password: formData.password,
     };
 
-    console.log("Payload:", payload);
-
     fetch("https://qurocity-lms-backend.onrender.com/api/quiz/auth", {
       method: "POST",
       headers: {
@@ -154,15 +197,16 @@ function MultiStepQuiz() {
     })
       .then((response) => response.json())
       .then((data) => {
-        
-        
+        console.log("Success:", data);
         if (data.token) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("username", formData.name); // Store the user's name
           navigate('/dashboard');
-        } else {
-          console.log("Token not recevied", data)
         }
       })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -283,8 +327,10 @@ function MultiStepQuiz() {
           </div>
         </form>
       </div>
+      
 
     </>
+    
   );
 }
 
