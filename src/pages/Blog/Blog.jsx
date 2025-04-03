@@ -6,10 +6,11 @@ function Blog() {
     <div>
       {/* <h1> Blog</h1> */}
 
-      
+
       <UnderDevelopmentCard/>
     </div>
   )
 }
 
 export default Blog
+//jgxj
